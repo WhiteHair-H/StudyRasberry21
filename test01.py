@@ -22,3 +22,6 @@ person = ('Kim' , 24 , 'male')
 print(person)
 print(person[1])
 person[1] = 45
+
+
+print("Github 추가 내용입니다.")
