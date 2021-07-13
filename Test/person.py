@@ -8,3 +8,12 @@ class Person(object):
 
     def getAge(self):
         return self.age
+
+class Man(Person):
+    gender = 'male'
+
+class Korean(Person):
+    nationality = 'Korea'
+
+class KoreanMan(Man, Korean):
+    pass
