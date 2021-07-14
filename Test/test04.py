@@ -1,9 +1,10 @@
-m = 0 
+m = 0
 n = 1
 
 def func():
-    global m , n # 전역 변수 선언
-    m += 1
+    global m
+    global n
+    m = m + 1
     n += 1
 
 func()
@@ -13,31 +14,40 @@ print(m, n)
 def counter(max):
     t = 0
 
-    def output(): # counter안에 있는 함수는 따로 사용불가
+    def output(): # counter함수에 속하는 함수로, 따로 호출 불가
         print('t = {0}'.format(t))
+    
 
-    while t < max :
+    while t < max:
         output()
         t += 1
 
-counter(10)
-# output 호출불가
 
-# 재귀함수 - 기하급수적으로 변화함
+counter(10)
+# output()
+
 def factorial(n):
     if n <= 1:
         return 1
     else:
-        return n * factorial(n -1)
+        return n * factorial(n - 1)
 
 print(factorial(10))
+print(factorial(9))
+print(factorial(8))
 print(factorial(7))
+print(factorial(6))
+print(factorial(5))
+print(factorial(4))
 print(factorial(3))
 print(factorial(2))
+print(factorial(1))
 
-# lambda = 익명함수
-a = lambda x , y : x * y
-print(a(2,5))
+
+# lambda
+a = lambda x, y : x * y
+print(a(2, 8))
+
 
 # Closure
 
@@ -48,6 +58,4 @@ def calc(a):
 
 sum = calc(1)
 print(sum(2))
-
-
 

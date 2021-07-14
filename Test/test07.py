@@ -1,7 +1,5 @@
 import RPi.GPIO as GPIO
-import minimum
-import numpy as np
-import flask as f
+import minimum as Min
 
-value = minimum.min(10, 5)
+value = Min.min(10, 5)
 print(value)
